@@ -14,7 +14,7 @@ function calculate(coins, changeValue) {
       ((coin <= x) ? c[x - coin] + 1 : Number.MAX_VALUE)
     );
     c.push(minCost);
-    s.push(minCoin);
+    s.push(minCoin || 0);
   }
 
   if (c[changeValue] === Number.MAX_VALUE) {
